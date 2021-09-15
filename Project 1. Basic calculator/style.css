@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+body {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 100px 1fr;
+  background: rgb(193, 193, 193);
+  background: linear-gradient(
+    228deg,
+    rgba(193, 193, 193, 1) 0%,
+    rgba(166, 166, 166, 1) 55%,
+    rgba(242, 242, 242, 1) 100%
+  );
+}
+h2 {
+  font-size: 3rem;
+}
+.main__heading {
+  margin-top: 5rem;
+  font-size: 4rem;
+  margin-top: 5rem;
+}
+.calculator {
+  height: 60rem;
+  width: 50rem;
+  border: 5px solid black;
+  box-shadow: 0px 0px 10px 1px rgb(56, 22, 22);
+  padding: 2rem 4rem;
+  background-color: rgb(184, 184, 184);
+  display: grid;
+}
+.calculator__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.calculator__buttons {
+  margin-top: 5rem;
+}
+.input {
+  border: 3px solid black;
+  width: 10rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  display: grid;
+  font-family: "Press Start 2P", cursive;
+}
+.btn {
+  width: 5rem;
+  height: 5rem;
+  border: 3px solid black;
+  font-size: 3rem;
+  font-family: "Press Start 2P", cursive;
+  margin: 1.5rem 1.2rem;
+  transition: all 0.2s;
+}
+.btn:hover {
+  box-shadow: 0px 2px 5px black;
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 1px 5px black;
+}
+.calculator__clear {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.calculator__img {
+  justify-self: center;
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+@keyframes move {
+  0% {
+    transform: translateX(50px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
